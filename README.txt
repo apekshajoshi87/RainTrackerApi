@@ -11,17 +11,20 @@ API and PostgresSQL database are docker containerized.
 
 Getting Started
 1. Clone the Repository
-git clone 
+git clone https://github.com/apekshajoshi87/RainTrackerApi.git/
 
 2. Open a terminal in Project folder
 
-3. Generate and Trust certificate
+3. Generate and Trust certificate if needed
 dotnet dev-certs https --trust
 
 3. Build and start the containers
 docker-compose up --build
 
 4. Access the api at http://localhost:8080/swagger/
+
+5. After the api is up and running you can also execute the RainTrackerTest project
+dotnet test
 
 Swagger has two endpoints
 POST /api/data
