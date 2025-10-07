@@ -6,7 +6,7 @@ services:
       POSTGRES_PASSWORD: admin
       POSTGRES_DB: raintracker
     ports:
-    - "5432:5432"
+      - "5432:5432"
     #volumes:
     #- db_data:/var/lib/postgresql/data
     networks:
@@ -19,18 +19,18 @@ services:
 
   raintrackerapi:
     depends_on:
-    - raindb
+      - raindb
     image: ${DOCKER_REGISTRY-}raintrackerapi
     build:
       context: .
       dockerfile: RainTrackerApi/Dockerfile
     ports:
-    - "8080:8080" 
+      - "8080:8080" 
     networks:
       - raintracker-net
 
 #volumes:
-#  db_data:
+ #  db_data:    
 
 networks:
   raintracker-net:

@@ -43,8 +43,8 @@ namespace RainTrackerApi.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError("Internal Server Error");
-                throw new Exception($"Internal Server Error {ex.Message}", ex);
+                _logger.LogError(ex, "Error in creating rain data for user {UserId}.", userId);
+                return StatusCode(500, "Internal Server Error");
             }
         }
 
@@ -65,8 +65,8 @@ namespace RainTrackerApi.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError("Internal Server Error");
-                throw new Exception($"Internal Server Error {ex.Message}", ex);
+                _logger.LogError(ex, "Error fetching rain data for user {UserId}.", userId);
+                return StatusCode(500, "Internal Server Error");
             }
         }
     }

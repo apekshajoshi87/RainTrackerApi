@@ -10,6 +10,6 @@
         /// <summary>
         /// Did it rain or not
         /// </summary>
-        public bool ItRained { get; set; }
+        public required bool ItRained { get; set; }
     }
 }

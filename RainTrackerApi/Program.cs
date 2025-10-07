@@ -12,6 +12,7 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
+        builder.Configuration.AddJsonFile("appsettings.json");
         builder.Services.AddScoped<IRainRecordServiceProvider, RainRecordServiceProvider>();
         builder.Services.AddScoped<IRainRecordDataProvider, RainRecordDataProvider>();
 
