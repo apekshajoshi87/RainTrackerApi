@@ -1,0 +1,6 @@
+@RainTrackerApi_HostAddress = http://localhost:5253
+
+GET {{RainTrackerApi_HostAddress}}/raintracker/
+Accept: application/json
+
+###
